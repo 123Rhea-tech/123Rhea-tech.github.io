@@ -1,5 +1,5 @@
 /* ============================================================
-   Full Catalog — 57-page PDF flipbook.
+   Full Catalog — 56-page PDF flipbook.
 
    Rasterised in the browser with the vendored PDF.js build that sits in
    vendor/pdfjs/. Nothing is fetched from the network: every URL below is
@@ -17,7 +17,7 @@
 const BASE = document.baseURI;
 const LIB_URL = new URL('vendor/pdfjs/pdf.min.mjs', BASE).href;
 const WORKER_URL = new URL('vendor/pdfjs/pdf.worker.min.mjs', BASE).href;
-const PDF_URL = new URL('assets/catalog/Peterpower-Catalog-57p.pdf', BASE).href;
+const PDF_URL = new URL('assets/catalog/Peterpower-Catalog-56p.pdf', BASE).href;
 
 const PRELOAD = 4;        // the first paint renders exactly these pages
 const CACHE_LIMIT = 12;   // rasterised pages kept in memory
@@ -57,7 +57,7 @@ export async function mount(opts) {
   let gen = 0;                  // bumped whenever cached canvases go stale
   let resizeTimer = 0;
 
-  // 57 pages of the same deck share one page size; page 1 defines it.
+  // 56 pages of the same deck share one page size; page 1 defines it.
   try {
     const probe = await doc.getPage(1).then(function (p) { return p.getViewport({ scale: 1 }); });
     if (probe.height) aspect = probe.width / probe.height;

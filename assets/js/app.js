@@ -32,7 +32,7 @@
   var flipping = false;
 
   // Two editions share one shell: 'interactive' is the built-in 16-page book,
-  // 'full' is the 57-page PDF rendered by the lazily imported pdfbook module.
+  // 'full' is the 77-page PDF rendered by the lazily imported pdfbook module.
   var activeBook = 'interactive';
   var pdfApi = null;            // Promise for the loaded module, or null
   var pdfReady = null;          // resolved pdfbook handle (or the failed stub)
@@ -150,7 +150,7 @@
         '<div class="key-grid">' + keyGrid + '</div>' +
         protos +
         specs +
-        '<div class="scenario"><span class="ic">&#9656;</span><p>' + esc(p.scenario) + '</p></div>' +
+        '<div class="scenario"><span class="ic">&#9676;</span><p>' + esc(p.scenario) + '</p></div>' +
         '<div class="inquiry">' + inquiry + '</div>' +
       '</div>' +
     '</div>';
@@ -402,7 +402,7 @@
       body = '<p>The catalog file could not be opened. Reload the page and try again. If it keeps ' +
         'failing, tell your webmaster that <code>assets/catalog</code> did not load.</p>';
     } else if (reason === 'engine' || location.protocol === 'file:') {
-      body = '<p>The 57-page catalog is drawn by a copy of PDF.js that ships inside this site. ' +
+      body = '<p>The 77-page catalog is drawn by a copy of PDF.js that ships inside this site. ' +
         'Browsers refuse to run that engine when a page is opened straight from a folder, so ' +
         'this edition cannot start here.</p>' +
         '<p>Open the catalog through its web address instead and the book loads normally. ' +
@@ -474,7 +474,7 @@
       if (i === 0) { label = 'Cover'; img = SITE.hero; }
       else if (i === PAGE_COUNT - 1) { label = 'Thank You'; img = null; }
       else { label = PRODUCTS[i - 1].name; img = PRODUCTS[i - 1].images[0]; }
-      var media = img ? '<img src="' + img + '" alt="" loading="lazy">' : '<div style="aspect-ratio:3/4;background:radial-gradient(120% 90% at 50% 0%,#3a2717,#17120e)"></div>';
+      var media = img ? '<img src="' + img + '" alt="" loading="lazy">' : '<div style="aspect-ratio:3/4;background:radial-gradient(120% 90% at 70% 0%,#3a2717,#17120e)"></div>';
       html += '<button class="thumb" data-go="' + i + '">' + media +
         '<div class="tl"><b>' + String(i + 1).padStart(2, '0') + '</b> ' + esc(label) + '</div></button>';
     }
@@ -640,7 +640,7 @@
     setMode(startMode);
 
     // deep links: #3 opens page 3 of Catalog 2026, #full / #full12 opens the
-    // 57-page edition (optionally at page 12)
+    // 77-page edition (optionally at page 12)
     var full = /^#full(\d*)$/.exec(location.hash);
     if (full) {
       pendingPdfPage = full[1] ? parseInt(full[1], 10) : 0;
