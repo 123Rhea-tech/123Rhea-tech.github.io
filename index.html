@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Peterpower 2026 B2B Product Catalog — Professional Power & Fast-Charging Solutions">
+  <title>Peterpower 2026 B2B Catalog</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pdf.css">
+</head>
+<body>
+
+  <!-- ============ TOP TOOLBAR ============ -->
+  <header class="topbar">
+    <div class="brand">
+      <img class="brand-logo" src="assets/img/logo.png" alt="Peterpower">
+      <div class="brand-text">
+        <span class="brand-name">Peterpower</span>
+        <span class="brand-sub">2026 B2B Product Catalog</span>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="bookswitch" id="bookswitch" role="tablist" aria-label="Catalog edition">
+        <button class="bs-btn active" data-book="interactive" role="tab" aria-selected="true">
+          <span class="bs-full">Catalog 2026</span><span class="bs-mini">16 pp</span>
+        </button>
+        <button class="bs-btn" data-book="full" role="tab" aria-selected="false">
+          <span class="bs-full">Full Catalog</span><span class="bs-mini">57 pp</span>
+        </button>
+      </div>
+
+      <button class="tb-btn" id="btn-search" title="Search & filter">
+        <span class="ico">⌕</span><span class="tb-label">Search</span>
+      </button>
+      <button class="tb-btn" id="btn-thumbs" title="Thumbnails">
+        <span class="ico">▦</span><span class="tb-label">Pages</span>
+      </button>
+      <button class="tb-btn" id="btn-mode" title="Toggle flip / scroll">
+        <span class="ico" id="mode-ico">≡</span><span class="tb-label" id="mode-label">Scroll</span>
+      </button>
+      <button class="tb-btn" id="btn-fullscreen" title="Fullscreen">
+        <span class="ico">⛶</span><span class="tb-label">Full</span>
+      </button>
+
+      <div class="pager">
+        <button class="pg-btn" id="btn-prev" title="Previous page">&#8249;</button>
+        <input class="pg-input" id="page-input" type="number" min="1" max="16" value="1" aria-label="Page number">
+        <span class="pg-total" id="page-total">/ 16</span>
+        <button class="pg-btn" id="btn-next" title="Next page">&#8250;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ THUMBNAIL DRAWER ============ -->
+  <aside class="drawer" id="thumb-drawer" aria-label="Page thumbnails">
+    <div class="drawer-head">
+      <span>Pages</span>
+      <button class="drawer-close" id="btn-close-thumbs" title="Close">&#215;</button>
+    </div>
+    <div class="thumb-grid" id="thumb-grid"></div>
+  </aside>
+
+  <!-- ============ SEARCH / FILTER PANEL ============ -->
+  <aside class="drawer drawer--right" id="search-panel" aria-label="Search and filter">
+    <div class="drawer-head">
+      <span>Search &amp; Filter</span>
+      <button class="drawer-close" id="btn-close-search" title="Close">&#215;</button>
+    </div>
+    <div class="search-body">
+      <input class="search-input" id="search-input" type="search"
+             placeholder="Search name, model, power, ports…" autocomplete="off">
+      <div class="filters">
+        <label>Power
+          <select id="f-power">
+            <option value="">All</option>
+            <option value="0-65">&le;65W</option>
+            <option value="66-140">66&ndash;140W</option>
+            <option value="141-300">141&ndash;300W</option>
+            <option value="301-">&gt;300W</option>
+          </select>
+        </label>
+        <label>Ports
+          <select id="f-ports">
+            <option value="">All</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="29">29</option>
+          </select>
+        </label>
+        <label>USB-C
+          <select id="f-usbc">
+            <option value="">All</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="15">15</option>
+          </select>
+        </label>
+        <label>Series
+          <select id="f-cat">
+            <option value="">All</option>
+            <option value="GaN">GaN</option>
+            <option value="Desktop">Desktop</option>
+            <option value="Station">Station</option>
+            <option value="Multi-Port">Multi-Port</option>
+            <option value="Dock">Dock</option>
+          </select>
+        </label>
+        <button class="btn-ghost" id="btn-clear">Clear</button>
+      </div>
+      <div class="results" id="search-results"></div>
+    </div>
+  </aside>
+
+  <!-- ============ VIEWER ============ -->
+  <main class="viewer" id="viewer">
+
+    <!-- Flip (book) mode -->
+    <div class="book" id="book">
+      <div class="book-stage" id="book-stage">
+        <div class="page page--left" id="page-left"></div>
+        <div class="page page--right" id="page-right"></div>
+        <div class="flipper" id="flipper" aria-hidden="true">
+          <div class="face face--front" id="flip-front"></div>
+          <div class="face face--back" id="flip-back"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll (continuous) mode -->
+    <div class="scroll" id="scroll" hidden></div>
+
+  </main>
+
+  <!-- ============ FULL CATALOG (57-page PDF, vendored PDF.js) ============ -->
+  <section class="pdfbook" id="pdfbook" data-mode="spread" aria-label="Full catalog" hidden>
+    <div class="pdf-scroll" id="pdf-scroll"></div>
+    <div class="pdf-notice" id="pdf-notice" hidden></div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footbar">
+    <div class="foot-brand">
+      <img class="foot-logo" src="assets/img/logo.png" alt="">
+      <span class="foot-company" id="foot-company"></span>
+    </div>
+    <div class="foot-links">
+      <a class="foot-link" id="foot-mail" href="#">&#9993; <span></span></a>
+      <a class="foot-link" id="foot-web" href="#" target="_blank" rel="noopener">&#127760; <span></span></a>
+    </div>
+  </footer>
+
+  <!-- ============ MOBILE BOTTOM NAV ============ -->
+  <div class="mobile-nav">
+    <button class="mn-btn" id="m-prev">&#8249;</button>
+    <span class="mn-page" id="m-page">1 / 16</span>
+    <button class="mn-btn" id="m-next">&#8250;</button>
+  </div>
+
+  <div class="overlay" id="overlay" hidden></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

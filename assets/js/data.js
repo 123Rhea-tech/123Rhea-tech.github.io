@@ -1,0 +1,411 @@
+window.CATALOG_DATA = {
+  "schemaVersion": "1.0",
+  "site": {
+    "title": "Peterpower 2026 B2B Catalog",
+    "brand": "Peterpower",
+    "company": "Shenzhen Peterpower Technology Co., Ltd",
+    "tagline": "Professional Power & Fast-Charging Solutions",
+    "coverSub": "Office & Meeting Room  |  Public Charging  |  Docking & B2B",
+    "website": "www.goodwinpower.com",
+    "email": "peter@goodwinpower.com",
+    "logo": "assets/img/logo.png",
+    "hero": "assets/img/hero.jpg"
+  },
+  "products": [
+    {
+      "id": "p01",
+      "slide": 2,
+      "name": "140W GaN TFT Smart Hub",
+      "model": "G1403CA",
+      "powerW": 140,
+      "totalPower": "140W",
+      "input": "100-240V~ 50/60Hz 2.5A",
+      "interface": "3C1A USB-C/USB-A",
+      "ports": 4,
+      "usbC": 3,
+      "category": "GaN",
+      "protocols": [],
+      "specs": [
+        "Output USB-C1/C2: 5V/9V/12V/15V 3A, 20V 5A, 28V 5A (140W max)",
+        "Output USB-C3: 5V/9V 3A, 12V 2.5A, 15V 2A (30W max)",
+        "Output USB-A1: 5V 3A, 9V 2A, 12V 1.5A (18W max)",
+        "USB-C1+USB-C2 = 100W+30W OR 65W+65W (130W max)",
+        "USB-C1/C2+USB-C3 = 100W+30W (130W max)",
+        "USB-C1/C2+USB-A1 = 100W+18W (118W max)",
+        "USB-C3+USB-A1 = 5V 3A",
+        "USB-C1+USB-C2+USB-C3 = 65W+45W+30W (140W max)",
+        "USB-C1+USB-C2+USB-A1 = 65W+45W+18W (128W max)",
+        "USB-C1+USB-C2+(C3+A1) = 65W+45W+15W (125W max)"
+      ],
+      "scenario": "Powers laptops, docking stations and phones across offices, meeting rooms and shared workspaces.",
+      "images": [
+        "assets/img/hero.jpg",
+        "assets/img/p01-alt.jpg"
+      ],
+      "scene": "assets/img/scene-1.jpg"
+    },
+    {
+      "id": "p02",
+      "slide": 3,
+      "name": "140W Retractable Desktop Charger",
+      "model": "G1404C",
+      "powerW": 140,
+      "totalPower": "140W",
+      "input": "100-240V~ 50/60Hz 2.5A",
+      "interface": "4-Port (2C+2C)",
+      "ports": 4,
+      "usbC": 4,
+      "category": "Desktop",
+      "protocols": [],
+      "specs": [
+        "C1/C2: 5V/9V/12V/15V 3A, 20V 5A (100W max)",
+        "C3/C4: 5V/9V 2.22A, 12V 1.7A (20W max)",
+        "C1+C2: 100W+40W (drop to 65W+40W)",
+        "C1+C3: 100W+20W (drop to 65W+20W)",
+        "C2+C3: 100W+20W (drop to 65W+20W)",
+        "C3+C4: 20W+20W",
+        "C1+C2+C3: 65W+45W+20W (drop to 40W+45W+20W)",
+        "C1+C2+C3+C4: 65W+40W+20W+20W (drop to 45W+20W+20W+20W)"
+      ],
+      "scenario": "Powers laptops, docking stations and phones across offices, meeting rooms and shared workspaces.",
+      "images": [
+        "assets/img/p02.jpg"
+      ],
+      "scene": "assets/img/scene-2.jpg"
+    },
+    {
+      "id": "p03",
+      "slide": 4,
+      "name": "100W Smart Desktop Charging Station",
+      "model": "",
+      "powerW": 100,
+      "totalPower": "100W",
+      "input": "AC 100V-240V 50-60Hz",
+      "interface": "5-Port (4C+1A)",
+      "ports": 5,
+      "usbC": 4,
+      "category": "Desktop",
+      "protocols": [
+        "PPS,PD3.0,QC4/3/2,AFC,FCP/SCP,Apple 2.4A,BC1.2,PE2/1.1"
+      ],
+      "specs": [
+        "C1: 5-20V, 5/9/12/15V 3A, 20V 5A, max 100W",
+        "C2/C3/C4: 5-20V, 5/9/12/15V 3A,20V/2.25A, max 45W",
+        "A1: 5-20V, 5/9/12V 3A,20V/1.5A, max 30W",
+        "Single: C1=100W,C2/3/4=45W,A1=30W",
+        "C1+C2: 65W+30W",
+        "C1+C2+C3: 45W+30W+20W",
+        "C1..C4: 45W+30W+10W+10W",
+        "C1..C4+A1: 45W+30W+10W+7.5W+7.5W"
+      ],
+      "scenario": "Powers laptops, docking stations and phones across offices, meeting rooms, Individual workstations & private offices",
+      "images": [
+        "assets/img/p03.jpg"
+      ],
+      "scene": "assets/img/scene-2.jpg"
+    },
+    {
+      "id": "p04",
+      "slide": 5,
+      "name": "120W GaN Fast Charge Hub (4C+2A)",
+      "model": "",
+      "powerW": 120,
+      "totalPower": "120W",
+      "input": "AC 100V-240V 50-60Hz",
+      "interface": "6-Port (4C+2A)",
+      "ports": 6,
+      "usbC": 4,
+      "category": "GaN",
+      "protocols": [
+        "PPS,PD3.0,QC4/3/2,AFC,FCP,SCP,Apple 2.4A,BC1.2,PE2/1.1"
+      ],
+      "specs": [
+        "C1/C2/C3/C4: 5V/3A,9V/3A,12V/3A,15V/3A,20V/3.25A",
+        "PPS: 5.00-21.00V 3.0A, max 65W",
+        "A1/A2: 5-20V 5V/3A,9V/3A,12V/2.5A,20V/1.5A",
+        "Single-Port: C=65W, A=30W",
+        "C1+C2/C3+A1/C4+A2: 5V1.5A+5V1.5A",
+        "C1+C3..: 60W+30W",
+        "C1+C2+C3/C4: 5V1.5A+5V1.5A+60W",
+        "Six-Port: simultaneous shared 5V"
+      ],
+      "scenario": "Powers laptops, docking stations and phones across offices, meeting rooms and shared workspaces.",
+      "images": [
+        "assets/img/p04.jpg"
+      ],
+      "scene": "assets/img/scene-1.jpg"
+    },
+    {
+      "id": "p05",
+      "slide": 6,
+      "name": "Universal 140W Multi-Port Charger (mixed USB A + C)",
+      "model": "",
+      "powerW": 140,
+      "totalPower": "140W",
+      "input": "AC 100-240V 50-60Hz",
+      "interface": "USB-A + USB-C",
+      "ports": 8,
+      "usbC": 7,
+      "category": "Multi-Port",
+      "protocols": [],
+      "specs": [
+        "Interface Type: USB-A + USB-C",
+        "C1/C2: 5V3A/9V3A/12V3A/15V3A/20V3.25A",
+        "C3/C4: 5V3A/9V3A/12V3A/15V3A/20V5A/28V5A",
+        "C5/C7/C8: 5V3A/9V3A/12V3A/15V3A/20V2.25A",
+        "A6: 5V3A/9V3A/12V2.5A/20V1.5A",
+        "C3+C4 / C5+A6: 5V1.5A + 5V1.5A"
+      ],
+      "scenario": "Powers laptops, docking stations and phones across offices, meeting rooms, Mixed-device open offices and shared workspaces",
+      "images": [
+        "assets/img/p05.jpg"
+      ],
+      "scene": "assets/img/scene-3.jpg"
+    },
+    {
+      "id": "p06",
+      "slide": 7,
+      "name": "210W Smart Multi-Port Charger",
+      "model": "",
+      "powerW": 210,
+      "totalPower": "210W",
+      "input": "AC 100V-240V 50-60Hz",
+      "interface": "5-Port (4C+1A)",
+      "ports": 5,
+      "usbC": 4,
+      "category": "Multi-Port",
+      "protocols": [],
+      "specs": [
+        "C1/C2: 5V3A/9V3A/12V3A/15V3A/20V2.25A (48W max)",
+        "C3/C4: 5V3A/9V3A/12V2.5A/15V2A/20V1.5A (33W max)",
+        "C3+C4: same as C3/C4 (33W max)",
+        "A1(QC3.0): 5V3A/9V2A/12V1.5A/20V1.5A (30W max)",
+        "C5: 5V3A/9V3A/12V2.5A/15V2A/20V1.5A (33W max)",
+        "A1+C5: 5V1.5A+5V1.5A"
+      ],
+      "scenario": "Powers laptops, docking stations and phones across offices, meeting rooms and shared workspaces.",
+      "images": [
+        "assets/img/p06.jpg"
+      ],
+      "scene": "assets/img/scene-4.jpg"
+    },
+    {
+      "id": "p07",
+      "slide": 8,
+      "name": "200W Smart Pro Charging Station (5C+3A)",
+      "model": "",
+      "powerW": 200,
+      "totalPower": "200W",
+      "input": "AC 100V-240V 50-60Hz",
+      "interface": "8-Port (5C+3A)",
+      "ports": 8,
+      "usbC": 5,
+      "category": "Station",
+      "protocols": [
+        "PPS,PD3.0/2.0,QC4/3/2,AFC,FCP,SCP,PE,BC1.2,Apple 2.4A"
+      ],
+      "specs": [
+        "C1/C2: 5-20V, 5V/3A,9V/3A,12V/3A,15V/3A,20V/5A, max 100W",
+        "C3/C4/C5: 5-20V, 5V/3A,9V/3A,12V/2.5A,15V/2A,20V/1.5A, max 30W",
+        "A1/A2/A3: 5-12V, max 22.5W",
+        "C1/C2/C3/C4: 100W/100W/30W/30W",
+        "C5+A1/A2/A3: simultaneous 5V shared 3A",
+        "C1+C2: 100W+100W",
+        "C1+C2+C5: 100W+65W+30W",
+        "C1..C5: 65W+65W+20W+20W+30W",
+        "C1..C5+A2: 65W+45W+20W+20W+30W+22.5W",
+        "C1..A3: 65W+65W+20W+20W+7.5W+7.5W+7.5W+7.5W"
+      ],
+      "scenario": "Powers laptops, docking stations and phones across offices, meeting rooms, Training rooms & collaborative labs",
+      "images": [
+        "assets/img/p07.jpg"
+      ],
+      "scene": "assets/img/scene-1.jpg"
+    },
+    {
+      "id": "p08",
+      "slide": 9,
+      "name": "200W Smart Multi-Port Desktop Charger",
+      "model": "",
+      "powerW": 200,
+      "totalPower": "200W",
+      "input": "AC 100V-240V 50-60Hz",
+      "interface": "8-Port (5C+3A)",
+      "ports": 8,
+      "usbC": 5,
+      "category": "Desktop",
+      "protocols": [],
+      "specs": [
+        "C1/C2: 5-20V, 5V/3A,9V/3A,12V/3A,15V/3A,20V/5A, max 100W",
+        "C3/C4/C5: 5-20V, 5V/3A,9V/3A,12V/2.5A,15V/2A,20V/1.5A, max 30W",
+        "A1/A2/A3: 5-12V, max 22.5W",
+        "C1/C2/C3/C4 independent: 100W/100W/30W/30W",
+        "C5+A1/A2/A3: simultaneous 5V shared 3A",
+        "C1+C2: 100W+100W",
+        "C1+C2+C5: 100W+65W+30W",
+        "C1..C5: 65W+65W+20W+20W+30W",
+        "C1..C5+A2: 65W+45W+20W+20W+30W+22.5W",
+        "C1..A3: 65W+65W+20W+20W+7.5W+7.5W+7.5W+7.5W"
+      ],
+      "scenario": "Powers laptops, docking stations and phones across offices, meeting rooms and shared workspaces.",
+      "images": [
+        "assets/img/p08.jpg"
+      ],
+      "scene": "assets/img/scene-2.jpg"
+    },
+    {
+      "id": "p09",
+      "slide": 10,
+      "name": "120W Intelligent Multi-Port Charger",
+      "model": "",
+      "powerW": 120,
+      "totalPower": "120W",
+      "input": "AC 100V-240V 50-60Hz",
+      "interface": "8-Port (4C+4A)",
+      "ports": 8,
+      "usbC": 4,
+      "category": "Multi-Port",
+      "protocols": [
+        "PPS,PD3.0/2.0,QC4/3/2,AFC,FCP/SCP,PE2/1.1,SFCP",
+        "QC3/2,AFC,FCP/SCP,PE2/1.1,SFCP"
+      ],
+      "specs": [
+        "USB-C1/C2/C3/C4: 3.3-21V 3A, 5/9/12/15V 3A, 20V 5A, max 100W",
+        "USB-A1/A2/A3/A4: 3.6-20V, max 22.5W",
+        "USB-A1+A2 and USB-A3+A4: simultaneous 5V shared 3A"
+      ],
+      "scenario": "Powers laptops, docking stations and phones across offices, Small meeting rooms & breakout zones and shared workspaces.",
+      "images": [
+        "assets/img/p09.jpg"
+      ],
+      "scene": "assets/img/scene-3.jpg"
+    },
+    {
+      "id": "p10",
+      "slide": 11,
+      "name": "135W Versatile Charger (8 port mixed)",
+      "model": "",
+      "powerW": 135,
+      "totalPower": "135W",
+      "input": "AC 100V-240V 50-60Hz",
+      "interface": "8-Port USB Charger",
+      "ports": 8,
+      "usbC": 7,
+      "category": "Multi-Port",
+      "protocols": [],
+      "specs": [
+        "C1/C2: 5V3A/9V3A/12V3A/15V3A/20V3.25A",
+        "C3/C4: 5V3A/9V3A/12V3A/15V3A/20V5A/28V5A",
+        "C5/C7/C8: 5V3A/9V3A/12V3A/15V3A/20V2.25A",
+        "A6: 5V3A/9V3A/12V2.5A/20V1.5A",
+        "C3+C4 / C5+A6: 5V1.5A+5V1.5A"
+      ],
+      "scenario": "Powers laptops, docking stations and phones across offices, meeting rooms and shared workspaces.",
+      "images": [
+        "assets/img/p10.jpg"
+      ],
+      "scene": "assets/img/scene-3.jpg"
+    },
+    {
+      "id": "p11",
+      "slide": 12,
+      "name": "65W GaN Mini Hub (2C+1A)",
+      "model": "",
+      "powerW": 65,
+      "totalPower": "65W",
+      "input": "AC 100-240V 50-60Hz 2.0A Max",
+      "interface": "3-Port (2C+1A)",
+      "ports": 3,
+      "usbC": 2,
+      "category": "GaN",
+      "protocols": [],
+      "specs": [
+        "C1/C2: 5V=3A/9V=3A/12V=3A/15V=3A/20V=5A",
+        "C3: 5V=3A/9V=3A/12V=3A/15V=3A/20V=3.25A",
+        "A1: 5V=3A/9V=2A/12V=1.5A/20V=1.5A"
+      ],
+      "scenario": "Powers laptops, docking stations and phones across offices, meeting rooms and shared workspaces.",
+      "images": [
+        "assets/img/p11.jpg"
+      ],
+      "scene": "assets/img/scene-1.jpg"
+    },
+    {
+      "id": "p12",
+      "slide": 13,
+      "name": "288W GaN Desktop Charging Station",
+      "model": "",
+      "powerW": 288,
+      "totalPower": "288W",
+      "input": "AC 100V-240V 50-60Hz",
+      "interface": "8-Port (6C+2A)",
+      "ports": 8,
+      "usbC": 6,
+      "category": "GaN",
+      "protocols": [],
+      "specs": [
+        "C1: 5V3A/9V3A/12V3A/15V3A/20V5A",
+        "C2: 5V3A/9V3A/12V3A/15V3A/20V2.25A",
+        "C3/C4/C5/A1: 5V2.4A",
+        "C6: 5V3A/9V3A/12V3A/15V3A/20V3.25A",
+        "A2: 5V3A/9V3A/12V2.5A/20V1.5A"
+      ],
+      "scenario": "Powers laptops, docking stations and phones across offices, meeting rooms and shared workspaces.",
+      "images": [
+        "assets/img/p12.jpg"
+      ],
+      "scene": "assets/img/scene-2.jpg"
+    },
+    {
+      "id": "p13",
+      "slide": 14,
+      "name": "420W Mega Charging Dock (15C+14A)",
+      "model": "",
+      "powerW": 420,
+      "totalPower": "420W",
+      "input": "AC 100V-240V 50-60Hz",
+      "interface": "29-Port (15C+14A)",
+      "ports": 29,
+      "usbC": 15,
+      "category": "Dock",
+      "protocols": [],
+      "specs": [
+        "C1-C15: 27W each",
+        "A1-A14: 22.5W each",
+        "C1+A3..A14: 27W+27W",
+        "15 USB-C simultaneously: 405W max",
+        "14 USB-A simultaneously: 315W max"
+      ],
+      "scenario": "Public charging stations (airports, hotel lobbies, shopping malls)",
+      "images": [
+        "assets/img/p13.jpg"
+      ],
+      "scene": "assets/img/scene-4.jpg"
+    },
+    {
+      "id": "p14",
+      "slide": 15,
+      "name": "660W Intelligent Multi-Port Desktop Charger",
+      "model": "",
+      "powerW": 660,
+      "totalPower": "660W",
+      "input": "AC 100V-240V 50-60Hz",
+      "interface": "8-Port (6C+2A)",
+      "ports": 8,
+      "usbC": 6,
+      "category": "Desktop",
+      "protocols": [],
+      "specs": [
+        "C1/C2/C3/C4/C5/C6 Single-Port:",
+        "5V3A, 9V3A, 12V3A, 15V3A, 20V",
+        "A1/A2 Single-Port:",
+        "5V3A, 9V3A, 12V2.5A, 20V1.5A"
+      ],
+      "scenario": "Powers laptops, docking stations and phones across offices, Large conference halls & AV control rooms and shared workspaces.",
+      "images": [
+        "assets/img/p14.jpg"
+      ],
+      "scene": "assets/img/scene-4.jpg"
+    }
+  ]
+};

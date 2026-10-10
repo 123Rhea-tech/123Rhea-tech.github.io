@@ -1,0 +1,4 @@
+pdfjs-dist 4.7.76 (Mozilla Apache-2.0)
+Source: npm registry tarball pdfjs-dist-4.7.76.tgz
+Files: pdf.min.mjs, pdf.worker.min.mjs
+Note: worker must be lazy-loaded only when Full Catalog opens.

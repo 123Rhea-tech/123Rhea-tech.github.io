@@ -1,0 +1,100 @@
+/* ============================================================
+   Full Catalog (57-page PDF) — viewer styles
+   Companion to assets/js/pdfbook.js. Rendered from the local
+   vendored PDF.js build; nothing here reaches the network.
+   ============================================================ */
+
+/* ---- edition switcher in the topbar ---- */
+.bookswitch {
+  display: flex; align-items: center; gap: 2px;
+  padding: 2px; margin-right: 8px;
+  border-radius: 9px;
+  background: rgba(0, 0, 0, .34);
+  border: 1px solid rgba(255, 255, 255, .09);
+}
+.bs-btn {
+  height: 28px; padding: 0 12px; border-radius: 7px;
+  font-size: 12.5px; letter-spacing: .2px; white-space: nowrap;
+  color: var(--cream); opacity: .7;
+  transition: background .15s, color .15s, opacity .15s;
+}
+.bs-btn:hover { opacity: 1; background: rgba(255, 255, 255, .07); }
+.bs-btn.active { opacity: 1; font-weight: 600; color: #fff; background: var(--brand); }
+.bs-mini { display: none; }
+
+@media (max-width: 1000px) {
+  .bs-full { display: none; }
+  .bs-mini { display: inline; }
+}
+
+@media (max-width: 768px) {
+  .bookswitch { margin-right: 4px; }
+  .bs-btn { height: 26px; padding: 0 9px; font-size: 12px; }
+}
+
+/* ---- viewer shell ---- */
+.pdfbook {
+  position: fixed; top: var(--topbar-h); left: 0; right: 0;
+  bottom: var(--bottom-bar-h);
+  display: block;
+  background: #100c08;
+}
+
+.pdf-scroll {
+  position: absolute; inset: 0;
+  overflow: auto;
+  padding: 14px 0 calc(var(--bottom-bar-h) + 16px);
+}
+
+/* spread / single are a fixed stage: the one visible row is centred, never scrolled */
+.pdfbook[data-mode="spread"] .pdf-scroll,
+.pdfbook[data-mode="single"] .pdf-scroll {
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; padding: 0;
+}
+
+.pdf-row { display: flex; align-items: flex-start; justify-content: center; gap: 8px; }
+.pdfbook[data-mode="scroll"] .pdf-row { margin-bottom: 10px; }
+
+.pdf-slot {
+  position: relative; flex: none;
+  width: var(--pdf-w, 320px);
+  height: var(--pdf-h, 420px);
+  overflow: hidden;
+  background: #fff; border-radius: 3px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, .55), 0 2px 8px rgba(0, 0, 0, .35);
+}
+.pdf-slot canvas { display: block; width: 100%; height: 100%; }
+
+/* a slot that has not been rasterised yet shows a shimmer, not an empty hole */
+.pdf-slot[data-state="idle"]::after,
+.pdf-slot[data-state="busy"]::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(100deg, #ece3d6 30%, #fff 50%, #ece3d6 70%);
+  background-size: 300% 100%;
+  animation: pdf-shimmer 1.15s linear infinite;
+}
+@keyframes pdf-shimmer {
+  from { background-position: 130% 0; }
+  to   { background-position: -130% 0; }
+}
+
+.pdf-notice {
+  position: absolute; inset: 0; z-index: 3;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  background: #100c08;
+}
+.pdf-notice-card {
+  max-width: 580px; padding: 26px 30px;
+  border-radius: 12px;
+  background: #221a14; border: 1px solid #3a2d21; color: var(--cream);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, .6);
+}
+.pdf-notice-card h2 { font-size: 18px; color: #fff; margin-bottom: 12px; }
+.pdf-notice-card p { font-size: 13.5px; line-height: 1.68; opacity: .86; margin-bottom: 10px; }
+.pdf-notice-card p:last-child { margin-bottom: 0; }
+.pdf-notice-card code {
+  font-family: var(--mono); font-size: 12.5px;
+  color: var(--gold); word-break: break-all;
+}
